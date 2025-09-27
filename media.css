@@ -1,0 +1,211 @@
+@charset 'utf-8';
+
+/* タブレット */
+@media(max-width:600px) {
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    /* header */
+    header {
+        max-width: 600px;
+        /* 最大幅600px */
+        margin: 0 auto;
+        /* 中央寄せ */
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        /* 両端配置 */
+        align-items: center;
+        /* 縦方向の位置を中央揃え */
+        gap: 20px;
+        /* 要素間の余白（お好みで） */
+    }
+
+    header img {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* 検索フォームは伸縮して中央を埋めるように */
+    header form {
+        flex: 1;
+        /* 残りスペースを埋める */
+        display: flex;
+        max-width: 300px;
+        /* 検索フォームの最大幅 */
+        margin: 0 20px;
+        /* 左右に余白 */
+    }
+
+    header form input {
+        flex: 1;
+        padding: 5px;
+    }
+
+    header form button {
+        padding: 5px 10px;
+    }
+
+    /* 右側メニュー（ログイン/カート）は横並びに */
+    header ul {
+        display: flex;
+        gap: 15px;
+    }
+
+    header ul li a {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        text-decoration: none;
+    }
+
+    /* main */
+    .items {
+        padding: 20px;
+    }
+
+    .items h1 {
+        font-weight: bold;
+        font-size: 20px;
+        margin: 50px 0 15px;
+    }
+
+    .items ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* 横4列 */
+        gap: 10px;
+        /* 各アイテムの間隔 */
+    }
+
+}
+
+/* スマホ */
+@media(max-width:400px) {
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    /* header */
+    header {
+        max-width: 400px;
+        padding: 10px;
+        gap: 8px;
+        /* 要素間の余白（お好みで） */
+    }
+
+    header img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* 検索フォームは伸縮して中央を埋めるように */
+    header form {
+        width: 30px;
+        /* 検索フォームの最大幅 */
+        margin: 0 10px;
+        /* 左右に余白 */
+    }
+
+    header form button {
+        padding: 5px;
+    }
+
+    header input {
+        padding: 4px;
+        width: 70px;
+    }
+
+    /* 右側メニュー（ログイン/カート）は横並びに */
+    header ul {
+        gap: 5px;
+    }
+
+    header ul li a {
+        gap: 2px;
+    }
+
+    header li a i {
+        font-size: 15px;
+    }
+
+    header li p {
+        font-size: 10px;
+    }
+
+    /* main */
+    .items {
+        padding: 10px;
+    }
+
+    .items h1 {
+        /* OUR ITEMS */
+        font-size: 20px;
+        margin: 40px 0 15px;
+    }
+
+    .items ul h1 {
+        /* 素敵な家具 */
+        font-size: 14px;
+    }
+
+    .items img {
+        width: 140px;
+        height: 90px;
+    }
+
+    .items ul h2 {
+        font-size: 16px;
+    }
+
+    .items ul p {
+        font-size: 14px;
+    }
+
+    .items li h2,
+    .items li p {
+        margin: 0 0 0 14px;
+    }
+
+    .button a {
+        display: block;
+        /* 幅や高さを効かせる */
+        border: 1.5px solid black;
+        text-align: center;
+        margin: 50px auto;
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        cursor: pointer;
+        text-decoration: none;
+        /* 下線を消す */
+        color: black;
+        font-size: 14px;
+    }
+
+
+
+    button {
+        width: 120px;
+        padding: 5px 16px;
+    }
+
+    .message {
+        width: 120px;
+        padding: 5px 16px;
+
+        position: fixed;
+        right: 32px;
+        /* 右側に配置 */
+        bottom: 32px;
+        /* 下に配置 */
+        font-size: 14px;
+        animation: prop 2s forwards;
+    }
+
+}

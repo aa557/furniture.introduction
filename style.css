@@ -1,58 +1,55 @@
 @charset "utf-8";
 
-.container {
-    margin: 0 16px;
-    width: 50%;
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 img {
     vertical-align: bottom;
 }
 
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+/* header */
+header {
+    display: flex;
+    padding: 15px;
+    justify-content: space-around;
+    align-items: center;
 }
 
-/* header */
-header ul {
-    display: flex;
-    list-style: none;
+header img {
+    width: 100px;
+    height: 100px;
 }
 
 header li a {
-    display: flex;
     flex-direction: column;
     /*imgの下に文字がいく*/
-    font-size: 12px;
+    font-size: 13px;
     text-align: center;
 }
 
-nav ul {
+header ul {
     list-style: none;
     display: flex;
     gap: 10px;
     /* li 同士の間隔 */
-    padding: 0;
-    /* ul の余白をリセット */
-    margin: 0;
-    /* ul の余白をリセット */
 }
 
-nav li a {
+header li a {
     display: flex;
     /* アイコンと文字を横並び */
     align-items: center;
     /* 縦位置を中央に */
-    gap: 5px;
+    gap: 10px;
     /* アイコンと文字の間隔 */
     text-decoration: none;
     color: inherit;
 }
 
 header li a i {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 header form {
@@ -60,7 +57,7 @@ header form {
 }
 
 header li+li {
-    margin-left: 8px;
+    margin-left: 14px;
 }
 
 header input,
@@ -79,42 +76,13 @@ header button {
     cursor: pointer;
 }
 
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* スマホ用 */
-@media (max-width: 600px) {
-    .container {
-        display: flex;
-        flex-direction: column; /* 縦並びにする */
-        align-items: center;
-    }
-
-    form {
-        width: 100%;  /* フォーム幅を画面いっぱいに */
-        display: flex;
-    }
-
-    form input {
-        flex: 1;      /* 入力欄が残り幅を占める */
-    }
-
-    nav ul {
-        flex-direction: row; /* 横並びでもOK、隙間を調整 */
-        gap: 10px;
-    }
-}
-
 /* large screen */
 .hero {
     width: 100%;
     height: 50vw;
     max-height: 400px;
-    margin: 0 auto;   /* 中央寄せ */
+    margin: 0 auto;
+    /* 中央寄せ */
     position: relative;
     /* 子要素の絶対配置の基準にする */
     overflow: hidden;
@@ -141,27 +109,49 @@ header .container {
 
 
 /* main */
-h1 {
+.items {
+    padding: 40px;
+}
+
+.items h1 {
     font-weight: bold;
-    font-size: 20px;
-    margin: 100px 0 30px 30%;
+    font-size: 24px;
+    margin: 0px 0 15px;
 }
 
-ul {
-    display: flex;
-    flex-wrap: wrap;
-    /* 要素を縦横に並べた際に、折り返しの指定 */
-    list-style: none;
-    gap: 8px;
-    margin: 0 0 0 11%;
+.items ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 横4列 */
+    gap: 10px;
+    /* 各アイテムの間隔 */
 }
 
-.ff div p {
-    margin: 0;
+.items li {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
 }
 
-.mm a {
-    display: block;           /* 幅や高さを効かせる */
+.items ul h2 {
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.items li h2,
+.items li p{
+    text-align: left;
+    margin: 0 0 0 30px;
+}
+
+.items img {
+    width: 190px;
+    height: 120px;
+}
+
+.button a {
+    display: block;
+    /* 幅や高さを効かせる */
     border: 2px solid black;
     text-align: center;
     margin: 50px auto;
@@ -169,7 +159,8 @@ ul {
     height: 60px;
     line-height: 60px;
     cursor: pointer;
-    text-decoration: none;    /* 下線を消す */
+    text-decoration: none;
+    /* 下線を消す */
     color: black;
 }
 
@@ -196,7 +187,6 @@ button {
     background: black;
     color: white;
     padding: 8px 16px;
-    border-radius: 50％;
 
     position: fixed;
     right: 32px;
@@ -205,7 +195,6 @@ button {
     /* 下に配置 */
 
     animation: prop 2s forwards;
-    /* animation-fill-mode: forwards; */
 }
 
 @keyframes prop {
